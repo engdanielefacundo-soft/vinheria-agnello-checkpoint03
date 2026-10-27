@@ -1,159 +1,207 @@
-# Vinheria Agnello — Checkpoint 03 (JavaScript)
+# Vinheria Agnello — São Paulo
 
-> Sistema de gerenciamento e análise de estoque de vinhos finos desenvolvido em **JavaScript puro**, aplicando conceitos fundamentais de **Arrays**, **Objetos** e **Funções de Alta Ordem (Higher-Order Functions: `forEach`, `filter`, `reduce` e `map`)**.
+> Website institucional desenvolvido com **HTML5 semântico** e **CSS3 puro**, criado com tom de voz empático, consultivo, acolhedor e didático para refletir a tradição de 15 anos da loja física na capital paulista e sua expansão para o e-commerce.
 
----
-
-## Informações do Projeto & Entrega
-
-- **Nome do Projeto:** Vinheria Agnello — Checkpoint 03
-- **Aluna:** Daniele Amaro Facundo
-- **Repositório no GitHub:** [https://github.com/engdanielefacundo-soft/vinheria-agnello-checkpoint03](https://github.com/engdanielefacundo-soft/vinheria-agnello-checkpoint03)
-- **Publicação no GitHub Pages:** [https://engdanielefacundo-soft.github.io/vinheria-agnello-checkpoint03/](https://engdanielefacundo-soft.github.io/vinheria-agnello-checkpoint03/)
+> [!NOTE]
+> **Informativo sobre o Uso de Inteligência Artificial:** Apenas o conteúdo textual deste projeto (narrativas institucionais, história da empresa, notas sobre harmonizações, dicas enológicas e descrições dos rótulos) foi elaborado com o auxílio de Inteligência Artificial (IA). Toda a arquitetura de software, estrutura semântica em HTML5, estilização visual com CSS3 puro, responsividade e lógica de programação em JavaScript foram desenvolvidas integralmente pela desenvolvedora.
 
 ---
 
-## 🎯 Objetivo da Atividade
+## Demonstração & Acesso Online
 
-Aplicar na prática os conceitos essenciais da linguagem JavaScript:
-1. **Manipulação de objetos e arrays** para modelagem de entidades do mundo real (rótulos de vinho).
-2. **Uso de funções de alta ordem** para processamento, filtragem, transformação e acumulação de dados.
-3. **Organização e modularização de código** através de funções reutilizáveis com parâmetros e retornos bem definidos.
-4. **Comunicação e saída de dados** utilizando estritamente `console.log()` e `alert()` (sem formulários ou manipulação direta de DOM para os dados).
+<p align="center">
+  <a href="https://engdanielefacundo-soft.github.io/vinheria-agnello-checkpoint03/" target="_blank" title="ir para o site">
+    <img src="src/assets/imgs/preview.gif" alt="ir para o site" title="ir para o site" width="100%">
+  </a>
+</p>
 
----
-
-## 📋 Requisitos do Sistema & Implementações Realizadas
-
-### 1. Array de Objetos de Vinhos
-A vinícola conta com um catálogo inicial pré-carregado no código (`catalogoVinhos`), onde cada vinho é representado como um objeto contendo:
-- `nome`: Nome comercial do vinho (string).
-- `tipo`: Categoria da bebida (`'tinto'`, `'branco'` ou `'rosé'`).
-- `safra`: Ano de colheita/engarrafamento (number).
-- `estoque`: Quantidade de garrafas disponíveis na adega (number).
-
-```javascript
-const catalogoVinhos = [
-  { nome: "Reserva Tinto Cabernet & Syrah", tipo: "tinto", safra: 2018, estoque: 14 },
-  { nome: "Chardonnay da Serra", tipo: "branco", safra: 2022, estoque: 3 },
-  { nome: "Rosé Provençal Suave", tipo: "rosé", safra: 2021, estoque: 8 },
-  { nome: "Espumante Brut Tradicional", tipo: "branco", safra: 2020, estoque: 2 },
-  { nome: "Merlot Clássico da Campanha", tipo: "tinto", safra: 2019, estoque: 18 },
-  { nome: "Sauvignon Blanc Tropical", tipo: "branco", safra: 2023, estoque: 4 },
-  { nome: "Pinot Noir Reserva Especial", tipo: "tinto", safra: 2020, estoque: 9 },
-  { nome: "Malbec Gran Reserva Mendoza", tipo: "tinto", safra: 2017, estoque: 6 }
-];
-```
+- **GitHub Pages:** [https://engdanielefacundo-soft.github.io/vinheria-agnello-checkpoint03/](https://engdanielefacundo-soft.github.io/vinheria-agnello-checkpoint03/)
+- **Repositório:** [https://github.com/engdanielefacundo-soft/vinheria-agnello-checkpoint03](https://github.com/engdanielefacundo-soft/vinheria-agnello-checkpoint03)
 
 ---
 
-### 2. Funções Reutilizáveis Desenvolvidas
+## Sobre o Projeto & Contexto do Negócio
 
-| Função | Finalidade | Método Utilizado |
-| :--- | :--- | :--- |
-| `adicionarVinho(nome, tipo, safra, estoque)` | Adiciona um novo objeto de vinho ao array após validação dos campos. | `push()` |
-| `listarVinhos(lista)` | Itera sobre todos os vinhos e exibe a relação completa com detalhes no console e texto formatado. | **`forEach`** |
-| `filtrarEstoqueBaixo(lista, limite = 5)` | Filtra e retorna apenas os vinhos com estoque crítico (< 5 garrafas). | **`filter`** |
-| `calcularEstoqueTotal(lista)` | Acumula e soma a quantidade total de garrafas na adega da vinícola. | **`reduce`** |
-| `obterNomesCaixaAlta(lista)` | Mapeia o array e retorna os nomes dos vinhos convertidos para letras maiúsculas. | **`map`** |
-| `executarDemonstracaoCompleta()` | Orquestra a execução sequencial de todas as funções e emite o relatório via `console.log()` e `alert()`. | Orquestrador |
+A **Vinheria Agnello** é uma tradicional loja de vinhos finos sediada em São Paulo - SP, atuando há mais de 15 anos. **A empresa não possui vinícola própria**: sua excelência baseia-se em uma curadoria rigorosa e independente de vinícolas parceiras nacionais e internacionais, cobrindo mais de **6.000 variedades de uvas viníferas**.
 
----
+### Diferenciais Centrais
+- **Tom de Voz Acolhedor e Didático:** O site guia com a mesma atenção tanto o consumidor iniciante quanto o enófilo avançado, desmistificando termos e oferecendo consultoria sob medida.
+- **Armazenagem Controlada:** Controle rígido de temperatura (14°C a 16°C), umidade e proteção total contra luz e vibrações.
+- **Transição Digital Humanizada:** Do atendimento tradicional "olho no olho" do fundador Sr. Giulio à modernização digital e e-commerce liderados por sua filha, Bianca Agnello.
 
-## 🧠 Detalhamento das Funções de Alta Ordem
-
-### 🔹 `forEach` — Listagem Completa
-O método `forEach` percorre o array executando uma função de callback para cada elemento, sem alterar a coleção original.
-```javascript
-function listarVinhos(lista = catalogoVinhos) {
-  lista.forEach((vinho, indice) => {
-    console.log(`#${indice + 1} | ${vinho.nome} | Tipo: ${vinho.tipo} | Safra: ${vinho.safra} | Estoque: ${vinho.estoque} un.`);
-  });
-}
-```
-
-### 🔹 `filter` — Vinhos com Estoque Crítico (< 5)
-O método `filter` avalia cada item do array através de um predicado booleano, gerando um novo array contendo apenas os vinhos cujo estoque é inferior a 5 garrafas:
-```javascript
-function filtrarEstoqueBaixo(lista = catalogoVinhos, limite = 5) {
-  return lista.filter(vinho => vinho.estoque < limite);
-}
-```
-
-### 🔹 `reduce` — Estoque Total da Vinícola
-O método `reduce` reduz todos os elementos do array a um único valor escalar. Partindo de um acumulador inicial igual a `0`, soma-se a propriedade `estoque` de cada garrafa:
-```javascript
-function calcularEstoqueTotal(lista = catalogoVinhos) {
-  return lista.reduce((acumulador, vinho) => acumulador + vinho.estoque, 0);
-}
-```
-
-### 🔹 `map` — Nomes em Caixa Alta
-O método `map` transforma cada elemento do array de entrada em um novo elemento, retornando um novo array unidimensional com todos os nomes dos vinhos em letras maiúsculas (`toUpperCase()`):
-```javascript
-function obterNomesCaixaAlta(lista = catalogoVinhos) {
-  return lista.map(vinho => vinho.nome.toUpperCase());
-}
-```
+### Paleta de Cores
+- **Fundo principal / Textos claros:** `#ffffff` (Branco)
+- **Detalhes e Destaques:** `#9F0423` (Vermelho vivo)
+- **Elementos secundários / Botões:** `#6C0115` (Vinho médio)
+- **Textos escuros / Rodapés / Fundos escuros:** `#3E0000` (Vinho escuro / Bordô)
+- **Restrição de Animações:** Sem botões cintilantes, piscantes ou com luzes neon/glow. Cards estáticos sem zoom/elevação no hover. Transições suaves apenas em links e botões (`0.3s ease`).
 
 ---
 
-## 🖥️ Como Executar e Visualizar
+## Checkpoint 03 — Gestão de Estoque em JavaScript
 
-### 1. Acesso Online (GitHub Pages)
-1. Acesse o link publicado: [https://engdanielefacundo-soft.github.io/vinheria-agnello-checkpoint03/](https://engdanielefacundo-soft.github.io/vinheria-agnello-checkpoint03/)
-2. Ao carregar a página, um **`alert()`** exibirá o resumo consolidado com:
-   - Estoque total da vinícola (`reduce`)
-   - Vinhos com estoque baixo (`filter`)
-   - Nomes em caixa alta (`map`)
-3. Pressione **`F12`** (ou botão direito &rarr; *Inspecionar* &rarr; aba *Console*) para visualizar os relatórios detalhados com formatações e cabeçalhos.
-4. Utilize os botões interativos na tela para acionar ou reexecutar cada função isoladamente.
+Implementação do sistema de processamento e análise de estoque utilizando **arrays de objetos** e **funções de alta ordem (Higher-Order Functions)** em JavaScript puro (`src/js/script.js`), com saídas formatadas via `console.log()` e `alert()`:
 
-### 2. Execução Local
-1. Clone o repositório ou baixe os arquivos:
-   ```bash
-   git clone https://github.com/engdanielefacundo-soft/vinheria-agnello-checkpoint03.git
-   ```
-2. Abra o arquivo `index.html` diretamente em qualquer navegador moderno (Chrome, Firefox, Edge, Safari).
-3. Abra o Console do Desenvolvedor (<kbd>F12</kbd>).
+- **Array de Objetos (`catalogoVinhos`):** Cada vinho possui `nome`, `tipo` (tinto, branco ou rosé), `safra` e `estoque`.
+- **`forEach` (`listarVinhos`):** Percorre a coleção e imprime a relação completa de rótulos e garrafas.
+- **`filter` (`filtrarEstoqueBaixo`):** Filtra automaticamente os vinhos com estoque crítico (< 5 garrafas).
+- **`reduce` (`calcularEstoqueTotal`):** Acumula e calcula a soma total de garrafas disponíveis na vinícola.
+- **`map` (`obterNomesCaixaAlta`):** Retorna os nomes dos vinhos convertidos em letras maiúsculas.
+- **`adicionarVinho`:** Função reutilizável para cadastrar novos rótulos ao array com validação.
+
+> 💡 **Como visualizar:** Abra a página no navegador com o Console do Desenvolvedor (<kbd>F12</kbd>) aberto. As funções são executadas automaticamente ao carregar a página e também podem ser acionadas através dos botões no painel da página inicial.
 
 ---
 
-## 📁 Estrutura de Pastas do Projeto
+## Estrutura das Páginas
 
-```text
+1. **Início (`index.html`)**
+   - **Hero com Vídeo em Loop (`agnello.mp4`):** Vídeo de fundo com sobreposição escura de contraste (`rgba(62, 0, 0, 0.72)`), título institucional e slogan oficial: *"Vinheria Agnello: Há mais de 15 anos trazendo o mundo dos vinhos para São Paulo. Tradição, qualidade e atendimento feito para você."*
+   - **Convite à Loja Física:** Chamada convidativa para visitar o espaço em São Paulo e desfrutar de degustação no balcão.
+   - **Vinhos em Destaque:** Grid com fotos em formato redondo (`border-radius: 50%`) com os nomes dos rótulos logo abaixo (cards estáticos).
+   - **Diferencial (O Atendimento):** Foco em Consultoria Especializada — os atendentes auxiliam a escolher o vinho ideal para cada ocasião, refeição ou orçamento.
+   - **Vinícolas Parceiras:** Destaque para a curadoria de produtores parceiros (Serra Gaúcha, Mantiqueira, Chile, Argentina, Itália, França, Espanha e Portugal).
+   - **O Espaço (Slider):** Carrossel interativo com legendas destacando a **Armazenagem Controlada** (temperatura, umidade, vibração e luz) e o ambiente acolhedor da loja.
+
+2. **Sobre Nós (`src/pages/sobre.html`)**
+   - **Storytelling Emocional Completo:** A história do Sr. Giulio Agnello, a transição para o digital com Bianca Agnello durante as restrições de mobilidade e os **Quatro Pilares Essenciais** estruturados em lista semântica: Atendimento Consultivo, Curadoria sem Fronteiras, Armazenagem de Excelência e Democratização do Vinho.
+   - **Linha do Tempo (`<ol>`):** Marcos históricos dos 15 anos de atuação em São Paulo.
+
+3. **Equipe (`src/pages/equipe.html`)**
+   - **Grid com 8 Cards de Colaboradores (Estáticos):**
+     1. *Sr. Giulio Agnello* - Proprietário e Sommelier Sênior (Gestão Tradicional)
+     2. *Bianca Agnello* - Diretora de E-commerce / Product Owner (Inovação)
+     3. *Marcos Toledo (Vendedor 1)* - Consultor de Vinhos e Harmonização
+     4. *Clara Mendonça (Vendedora 2)* - Especialista em Vinhos Internacionais
+     5. *André Fagundes (Vendedor 3)* - Especialista em Vinhos Nacionais e Espumantes
+     6. *Roberto Sanches (Administração)* - Gerente Administrativo/Financeiro
+     7. *Tiago Meireles (Estoque)* - Especialista em Logística e Armazenagem Controlada
+     8. *Juliana Ramos (Estoque)* - Assistente de Conservação de Qualidade
+
+4. **Nossos Vinhos (`src/pages/nossos-vinhos.html`)**
+   - **Foco Didático para Iniciantes:** Blocos práticos explicando o que significa Vinho Seco, Vinho Doce/Suave, Vinho Fortificado, além de Corpo e Taninos com ícone oficial de favicon.
+   - **Tabela de Harmonização Perfeita (`<table>`):** Tabela semântica elegante com colunas para **Ocasião / Prato** (Almoço de família, Jantar para visitas, Risoto suave, Carré de cordeiro, etc.), **Tipo Sugerido** (Branco, Tinto, Espumante), **Características** (Seco, Semisseco, etc.) e Sugestão de Rótulo Parceiro.
+
+5. **Contato (`src/pages/contato.html`)**
+   - **Formulário Consultivo:** Com a frase quebra-gelo: *"Tem dúvidas sobre qual vinho escolher para o seu jantar? Nossos especialistas estão prontos para ajudar. Mande sua mensagem!"*
+   - **Localização Real via Iframe:** Mapa interativo do Google Maps centrado na localização de São Paulo - SP.
+   - **Canais Diretos:** Informações de WhatsApp dos consultores, telefone e horários de degustação no balcão.
+
+6. **Painel Administrativo (`src/pages/admin.html`)**
+   - **Área Restrita com Autenticação:** Proteção por senha com modais customizados que seguem a identidade visual da loja.
+   - **Gestão de Inventário & Curadoria:** Tabela dinâmica de controle de rótulos sob armazenagem climatizada.
+   - **Assistente Interativo de Cadastro:** Rotina passo a passo de cadastro de vinhos com validações em tempo real via loops `do...while`.
+
+---
+
+## Guia de Navegação e Acesso ao Admin de Cadastro de Vinhos
+
+Para acessar a área restrita do sommelier e cadastrar novos rótulos de vinhos:
+
+1. **Como Chegar ao Painel Admin:**
+   - **Pela Página Nossos Vinhos:** Acesse o menu **Nossos Vinhos** e clique no botão de destaque **Acesso Administrativo (Sommelier)** localizado no topo da seção.
+   - **Acesso Direto:** É possível acessar diretamente digitando o caminho `src/pages/admin.html` no navegador.
+
+2. **Autenticação de Segurança:**
+   - Ao abrir a página, um diálogo modal personalizado solicitará a senha de administrador.
+   - **Senha de Administrador:** `agnelovinhocp` (ou `agnellocp`).
+   - Se a senha estiver correta, um aviso de confirmação será exibido e o painel será liberado.
+   - Caso clique em **Cancelar** ou digite uma senha incorreta, o acesso será negado e o sistema retornará automaticamente para a página inicial (`index.html`).
+
+3. **Como Cadastrar um Novo Vinho:**
+   - No painel administrativo, localize a seção de cadastro e clique no botão **Cadastrar Novo Vinho**.
+   - O assistente interativo guiará o preenchimento com validações rigorosas em `do...while`:
+     - **Etapa 1 (Nome do Rótulo):** Digite o nome do vinho (campo obrigatório, não permite valor em branco).
+     - **Etapa 2 (Classificação):** Digite o tipo do vinho (restrito estritamente a `Tinto`, `Branco`, `Suave` ou `Seco`).
+     - **Etapa 3 (Safra):** Digite o ano de colheita (número inteiro válido entre 1800 e 2030).
+     - **Etapa 4 (Estoque):** Digite a quantidade disponível (número inteiro maior ou igual a 0).
+   - Se o botão **Cancelar** for clicado em qualquer etapa, o processo é cancelado imediatamente e nenhum dado é registrado.
+   - Concluído com sucesso, o novo vinho é adicionado no topo da tabela de inventário com o selo **Novo** e uma notificação de sucesso é disparada na interface e no console.
+
+4. **Encerramento da Sessão:**
+   - Para sair com segurança da área administrativa, clique no botão **Sair do Painel** no topo da tela. A sessão será finalizada e você será redirecionado para a página inicial.
+
+---
+
+## Árvore de Diretórios
+
+```plaintext
 vinheria-agnello-checkpoint03/
-│
-├── index.html          # Página principal com descrição, títulos e script no final do body
-├── README.md           # Documentação completa com explicações técnicas e links
-│
+├── index.html
+├── README.md
 └── src/
+    ├── assets/
+    │   └── imgs/
+    │       ├── agnello.mp4
+    │       ├── preview.gif
+    │       ├── hero-poster.jpg
+    │       ├── logovert.png
+    │       ├── logowhite.png
+    │       ├── triglog.png
+    │       ├── balcao.jpg
+    │       ├── loja.png
+    │       ├── loja2.png
+    │       ├── loja3.png
+    │       ├── espaco-adega.jpg
+    │       ├── espaco-degustacao.jpg
+    │       ├── vinho-reserva.jpg
+    │       ├── vinho-branco.jpg
+    │       ├── vinho-rose.jpg
+    │       ├── espumante.jpg
+    │       ├── agnello.jpg
+    │       ├── bianca.jpg
+    │       ├── trab1.jpg
+    │       ├── trab2.jpg
+    │       ├── trab6.png
+    │       ├── trab7.png
+    │       ├── trab8.png
+    │       ├── trab9.png
+    │       └── favicon-*.svg
     ├── css/
-    │   └── style.css   # Estilização com identidade visual da Vinheria Agnello
+    │   ├── global.css
+    │   ├── home.css
+    │   ├── sobre.css
+    │   ├── nossos-vinhos.css
+    │   ├── equipe.css
+    │   ├── contato.css
+    │   ├── admin.css
+    │   └── style.css
     ├── js/
-    │   └── script.js   # Lógica em JS com objetos, arrays e Higher-Order Functions
-    └── assets/
-        └── imgs/       # Imagens e ícones de identidade visual
+    │   ├── global.js
+    │   ├── home.js
+    │   ├── contato.js
+    │   ├── admin.js
+    │   ├── cadastro.js
+    │   └── script.js
+    └── pages/
+        ├── contato.html
+        ├── equipe.html
+        ├── nossos-vinhos.html
+        ├── sobre.html
+        └── admin.html
 ```
 
 ---
 
-## ✅ Checklist de Critérios de Avaliação (100 pts)
+## Autor(a)
 
-| Critério Avaliado | Pontuação Máxima | Situação |
-| :--- | :---: | :---: |
-| **Uso correto de objetos e arrays** | 25 pts | ✅ **Atendido:** Array `catalogoVinhos` com objetos estruturados (`nome`, `tipo`, `safra`, `estoque`) e função `adicionarVinho`. |
-| **Uso de ao menos 3 funções de alta ordem** | 25 pts | ✅ **Atendido:** Implementação completa de todas as 4 funções (`forEach`, `filter`, `reduce` e `map`). |
-| **Organização e reutilização de código com funções** | 20 pts | ✅ **Atendido:** Funções modulares, documentadas com comentários explicativos (JSDoc) e reutilizáveis. |
-| **Saídas via console.log ou alert()** | 10 pts | ✅ **Atendido:** Emissão formatada no console e janela modal amigável com `alert()`, sem manipulação de formulários. |
-| **Estrutura do projeto e clareza do README.md** | 10 pts | ✅ **Atendido:** Estrutura estrita conforme solicitada e documentação detalhada com instruções e exemplos. |
-| **Estilização básica aplicada ao HTML** | 10 pts | ✅ **Atendido:** Arquivo `style.css` aplicado, responsivo e alinhado à paleta clássica da vinheria. |
-| **TOTAL** | **100 pts** | 🏆 **100% dos requisitos concluídos** |
-
----
-
-## 👩‍💻 Autora
-
-**Daniele Amaro Facundo**  
-- GitHub: [@engdanielefacundo-soft](https://github.com/engdanielefacundo-soft)  
-- E-mail: engdanielefacundo@gmail.com  
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/engdanielefacundo-soft" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/318645150?s=400&u=487f57065ae51d20c891423ce21b6140ef3d562b&v=4" width="160px;" alt="Foto de Daniele Amaro Facundo" style="border-radius: 50%; border: 3px solid #9F0423;"/><br>
+        <sub><b>Daniele Amaro Facundo</b></sub>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/daniele-amaro-facundo-1143113b9" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/danielefacundo_" target="_blank">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+      </a>
+    </td>
+  </tr>
+</table>
