@@ -198,10 +198,18 @@ body {
   letter-spacing: 0.5px;
   border-radius: var(--border-radius-sm);
   border: 1px solid transparent;
+  outline: none;
   cursor: pointer;
   transition: var(--transition-smooth);
   text-decoration: none;
   text-align: center;
+}
+
+.btn:focus,
+.btn:focus-visible,
+button:focus,
+button:focus-visible {
+  outline: none;
 }
 
 .btn-primary {
