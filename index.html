@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinheria Agnello — Checkpoint 03 (JavaScript)</title>
+  <meta name="description" content="Sistema de gestão de vinhos da Vinheria Agnello desenvolvido em JavaScript para o Checkpoint 03, aplicando objetos, arrays e funções de alta ordem (map, filter, reduce, forEach).">
+  <meta name="author" content="Daniele Amaro Facundo">
+
+  <link rel="icon" type="image/svg+xml" href="src/assets/imgs/favicon-taca.svg">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho Principal -->
+  <header class="site-header">
+    <div class="container">
+      <div style="margin-bottom: 1rem;">
+        <img src="src/assets/imgs/logowhite.png" alt="Vinheria Agnello" style="max-width: 240px; height: auto; display: inline-block;">
+      </div>
+      <span class="header-badge">Checkpoint 03 &bull; JavaScript</span>
+      <h1 class="site-title">Vinheria Agnello</h1>
+      <p class="site-subtitle">
+        Sistema de Catálogo e Gestão de Estoque de Vinhos utilizando Objetos, Arrays e Funções de Alta Ordem
+      </p>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Instrução sobre Console e Alertas -->
+      <section class="alert-box" aria-label="Instruções de visualização">
+        <div class="alert-icon">💡</div>
+        <div>
+          <h3>Execução via Console e Alertas</h3>
+          <p>
+            Conforme as diretrizes da atividade, todas as operações acontecem diretamente via <code>console.log()</code> e <code>alert()</code>.
+            Pressione <kbd>F12</kbd> (ou clique com o botão direito &rarr; <em>Inspecionar</em> &rarr; aba <em>Console</em>) para acompanhar todos os relatórios formatados em tempo real!
+          </p>
+        </div>
+      </section>
+
+      <!-- Descrição do Projeto -->
+      <section class="card-section">
+        <div class="section-header">
+          <span class="section-tag">Visão Geral</span>
+          <h2>Sobre o Sistema Desenvolvido</h2>
+          <p>
+            Este projeto foi desenvolvido por <strong>Daniele Amaro Facundo</strong> como parte do Checkpoint 03.
+            O objetivo é demonstrar a manipulação avançada de dados em JavaScript puro através de funções modulares e reutilizáveis,
+            gerenciando o estoque e o catálogo da Vinheria Agnello.
+          </p>
+        </div>
+
+        <!-- Grade de Métodos Implementados -->
+        <div class="methods-grid">
+          <div class="method-card">
+            <span class="method-badge">forEach</span>
+            <h4>Listagem Completa</h4>
+            <p>Percorre cada vinho cadastrado e imprime todos os detalhes no console (nome, tipo, safra e estoque).</p>
+            <code>lista.forEach(...)</code>
+          </div>
+
+          <div class="method-card">
+            <span class="method-badge">filter</span>
+            <h4>Estoque Baixo</h4>
+            <p>Filtra e retorna apenas os vinhos que possuem menos de 5 garrafas disponíveis na adega.</p>
+            <code>lista.filter(v => v.estoque &lt; 5)</code>
+          </div>
+
+          <div class="method-card">
+            <span class="method-badge">reduce</span>
+            <h4>Estoque Total</h4>
+            <p>Calcula a soma acumulativa de todas as garrafas cadastradas no estoque da vinícola.</p>
+            <code>lista.reduce((acc, v) => acc + v.estoque, 0)</code>
+          </div>
+
+          <div class="method-card">
+            <span class="method-badge">map</span>
+            <h4>Nomes em Caixa Alta</h4>
+            <p>Transforma o array de vinhos em um novo array contendo os nomes em letras maiúsculas.</p>
+            <code>lista.map(v => v.nome.toUpperCase())</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ações Interativas Rápidas -->
+      <section class="card-section">
+        <div class="section-header">
+          <span class="section-tag">Painel de Testes</span>
+          <h2>Disparo das Funções</h2>
+          <p>
+            O script é executado automaticamente ao carregar a página. Caso deseje reexecutar ou acionar funções individualmente, utilize os botões abaixo:
+          </p>
+        </div>
+
+        <div class="actions-grid">
+          <button type="button" class="btn btn-primary" onclick="listarVinhos(); alert('Listagem completa impressa no Console (F12)!');">
+            📋 Listar Todos (forEach)
+          </button>
+
+          <button type="button" class="btn btn-outline" onclick="const b = filtrarEstoqueBaixo(); alert('Vinhos com estoque crítico (< 5 un.):\n\n' + b.map(v => '• ' + v.nome + ' (' + v.estoque + ' un.)').join('\n'));">
+            ⚠️ Estoque Baixo (filter)
+          </button>
+
+          <button type="button" class="btn btn-outline" onclick="const t = calcularEstoqueTotal(); alert('Estoque total na Vinheria Agnello:\n\n' + t + ' garrafas cadastradas.');">
+            📦 Estoque Total (reduce)
+          </button>
+
+          <button type="button" class="btn btn-outline" onclick="const m = obterNomesCaixaAlta(); alert('Nomes em Caixa Alta (map):\n\n' + m.map((n, i) => (i + 1) + '. ' + n).join('\n'));">
+            🔤 Nomes em Caixa Alta (map)
+          </button>
+
+          <button type="button" class="btn btn-outline" onclick="const novo = adicionarVinho('Cabernet Sauvignon Gran Reserva', 'tinto', 2020, 10); alert('Vinho adicionado com sucesso:\n\n' + novo.nome + ' (' + novo.safra + ') - Estoque: ' + novo.estoque + ' un.');">
+            ➕ Adicionar Vinho Teste
+          </button>
+
+          <button type="button" class="btn btn-full" onclick="executarDemonstracaoCompleta(true);">
+            🍷 Executar Relatório Completo (Console &amp; Alert)
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>Vinheria Agnello &bull; Checkpoint 03 &bull; Todos os direitos reservados.</p>
+      <p class="footer-author">Desenvolvido por: Daniele Amaro Facundo</p>
+    </div>
+  </footer>
+
+  <!-- Script JavaScript carregado obrigatoriamente no final do body conforme o requisito -->
+  <script src="src/js/script.js"></script>
+</body>
+</html>
